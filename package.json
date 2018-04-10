@@ -1,0 +1,31 @@
+{
+  "name": "file-library",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Webservice for serving Files for theLink over multiple backends.",
+  "repository": "https://github.com/menome",
+  "license": "Commercial",
+  "dependencies": {
+    "@menome/botframework": "^1.0.6",
+    "forever": "latest",
+    "express": "latest",
+    "jsonwebtoken": "^8.2.1",
+    "convict": "latest",
+    "ajv": "^5.2.2",
+    "request": "latest",
+    "request-promise": "latest",
+    "webdav": "^1.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "chai": "^4.1.0",
+    "nodemon": "latest",
+    "mock-require": "^2.0.1"
+  },
+  "scripts": {
+    "start": "[ \"$NODE_ENV\" = \"production\" ] && npm run prod || npm run dev",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js app/app.js",
+    "prod": "./node_modules/forever/bin/forever --minUptime 5000 --spinSleepTime 1000 app/app.js",
+    "test": "./node_modules/mocha/bin/mocha -C test"
+  }
+}

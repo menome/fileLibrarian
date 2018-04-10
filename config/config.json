@@ -1,0 +1,16 @@
+{
+  "logging": true,
+  "port": 3000,
+  "fileLibrary": {
+    "jwtSecret": "nice web mister crack spider"
+  },
+  "librarians": [
+    {
+      "librarianType": "webdav",
+      "librarianKey": "sambadav",
+      "host": "http://localhost:8080/webfolders",
+      "username": "username",
+      "password": "password"
+    }
+  ]
+}
