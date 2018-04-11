@@ -1,17 +1,17 @@
-# File Library
+# File Librarian
 
 File Retrieval service for theLink.
 
-This is the Library.
+This is the Librarian.
 It has plugins for different backends. (Eg. WebDAV.)
-Use config to register Librarians with plugins. Eg:
+Use config to register connections that use plugins as backends. Eg:
 
 ```json
 {
-  "librarianType": "webdav",
-  "librarianKey": "localwebdav",
-  "host": "http://localhost:8080/webfolders",
+  "connection_type": "webdav",
+  "connection_libraryname": "sambadav",
+  "host": "http://localhost:8080/webdav",
   "username": "user",
-  "password": "password"
+  "password": "pass"
 }
 ```
