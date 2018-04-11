@@ -5,8 +5,9 @@
 "use strict";
 var bot = require('@menome/botframework')
 var config = require('./config.js');
-var WebDavLibrarian = require('./plugins/WebDavLibrarian');
-var LibrarianRegistry = require('./LibrarianRegistry');
+var WebDavPlugin = require('./plugins/WebDavPlugin');
+var MinioPlugin = require('./plugins/MinioPlugin');
+var ConnectionRegistry = require('./ConnectionRegistry');
 var Authenticate = require('./auth');
 var PluginCatalog = require('./PluginCatalog');
 
@@ -18,11 +19,11 @@ bot.configure({
   port: config.get('port')
 });
 
-var thisRegistry = new LibrarianRegistry();
+var thisRegistry = new ConnectionRegistry();
 
-config.get('librarians').forEach((librarian) => {
-  var thisLibObject = new PluginCatalog.plugins[librarian.librarianType]({...librarian});
-  thisRegistry.register(librarian.librarianKey,thisLibObject);
+config.get('connections').forEach((connection) => {
+  var thisConnection = new PluginCatalog.plugins[connection.connection_type]({...connection});
+  thisRegistry.register(connection.connection_libraryname,thisConnection);
 })
 
 // Register our sync endpoint.

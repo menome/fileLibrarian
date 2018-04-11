@@ -11,7 +11,7 @@ var bot = require('@menome/botframework')
 var config = convict({
   port: bot.configSchema.port,
   logging: bot.configSchema.logging,
-  fileLibrary: {
+  librarian: {
     jwtSecret: {
       doc: "The secret we use to verify JSON Web Tokens",
       format: "String",
@@ -20,15 +20,15 @@ var config = convict({
       sensitive: true
     }
   },
-  librarians: {
+  connections: {
     doc: "Array of librarians. Includes librarian type and whatever config params it needs.",
     default: [],
     format: function check(librarians) {
       librarians.forEach((librarian) => {
-        if(typeof librarian.librarianType !== 'string') 
-          throw new Error("Librarian must have librarianType property")
-        if(typeof librarian.librarianKey !== 'string') 
-          throw new Error("Librarian must have libraryKey property")
+        if(typeof librarian.connection_type !== 'string') 
+          throw new Error("Librarian must have connection_type property")
+        if(typeof librarian.connection_libraryname !== 'string') 
+          throw new Error("Librarian must have connection_libraryname property")
       })
     }
   }

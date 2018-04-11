@@ -1,10 +1,10 @@
 /**
- * Keeps a list of registered libraries.
+ * Keeps a list of registered connections.
  * 
  * Each librarian has a string key, and a Librarian object that implements a few functions.
  */
 
-function LibrarianRegistry() {
+function ConnectionRegistry() {
   this.librarians = {};
 
   this.register = function(key,librarian) {
@@ -17,4 +17,4 @@ function LibrarianRegistry() {
   }
 }
 
-module.exports = LibrarianRegistry;
+module.exports = ConnectionRegistry;

@@ -5,7 +5,7 @@ var createClient = require('webdav');
 var config = require('../config.js');
 var PluginCatalog = require('../PluginCatalog');
 
-function WebDavLibrarian({host,username,password}) {
+function WebDavPlugin({host,username,password}) {
   if(!host || !username || !password) throw new Error("Invalid config for webdav.")
   this.client = createClient(host,username,password);
   
@@ -27,6 +27,6 @@ function WebDavLibrarian({host,username,password}) {
   }
 }
 
-PluginCatalog.register('webdav', WebDavLibrarian);
+PluginCatalog.register('webdav', WebDavPlugin);
 
-module.exports = WebDavLibrarian;
+module.exports = WebDavPlugin;
