@@ -5,11 +5,15 @@
 "use strict";
 var bot = require('@menome/botframework')
 var config = require('./config.js');
-var WebDavPlugin = require('./plugins/WebDavPlugin');
-var MinioPlugin = require('./plugins/MinioPlugin');
 var ConnectionRegistry = require('./ConnectionRegistry');
 var Authenticate = require('./auth');
 var PluginCatalog = require('./PluginCatalog');
+
+// Loader. So we don't have to individually require each file.
+var normalizedPath = require("path").join(__dirname, "plugins");
+require("fs").readdirSync(normalizedPath).forEach(function(file) {
+  require("./plugins/" + file);
+});
 
 // We only need to do this once. Bot is a singleton.
 bot.configure({

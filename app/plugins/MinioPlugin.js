@@ -5,7 +5,7 @@ var config = require('../config.js');
 var PluginCatalog = require('../PluginCatalog');
 var Minio = require('minio')
 
-function MinioLibrarian({host,port,secure,accesskey,secretkey}) {
+function MinioPlugin({host,port,secure,accesskey,secretkey}) {
   if(!host || !accesskey || !secretkey) throw new Error("Invalid config for Minio.")
 
   this.client = new Minio.Client({
@@ -41,6 +41,6 @@ function MinioLibrarian({host,port,secure,accesskey,secretkey}) {
   }
 }
 
-PluginCatalog.register('minio', MinioLibrarian);
+PluginCatalog.register('minio', MinioPlugin);
 
-module.exports = MinioLibrarian;
+module.exports = MinioPlugin;
