@@ -2,6 +2,7 @@
 # This image will be based on the official nodejs docker image
 FROM node:8.4.0
 
+VOLUME ['/srv/app/ssl'];
 EXPOSE 80
 ENV PORT 80
 

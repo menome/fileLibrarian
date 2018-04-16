@@ -20,7 +20,8 @@ bot.configure({
   name: "File Library",
   desc: "File Retrieval Service for theLink",
   logging: config.get('logging'),
-  port: config.get('port')
+  port: config.get('port'),
+  ssl: config.get('ssl')
 });
 
 var thisRegistry = new ConnectionRegistry();

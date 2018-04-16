@@ -1,16 +1,29 @@
 {
   "logging": true,
   "port": 3000,
-  "fileLibrary": {
+  "librarian": {
     "jwtSecret": "nice web mister crack spider"
   },
-  "librarians": [
+  "ssl": {
+    "enable": false,
+    "certpath": "/srv/app/ssl/cert.pem",
+    "keypath": "/srv/app/ssl/key.pem",
+    "port": 443
+  },
+  "connections": [
     {
-      "librarianType": "webdav",
-      "librarianKey": "sambadav",
+      "connection_type": "webdav",
+      "connection_libraryname": "sambadav",
       "host": "http://localhost:8080/webfolders",
-      "username": "username",
-      "password": "password"
+      "username": "kaust",
+      "password": "n00dl3c0rn"
+    },
+    {
+      "connection_type": "minio",
+      "connection_libraryname": "miniofiles",
+      "host": "10.2.200.156",
+      "accesskey": "menomeuser",
+      "secretkey": "hellaNiceLemons21"
     }
   ]
 }

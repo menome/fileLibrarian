@@ -6,7 +6,7 @@
   "repository": "https://github.com/menome",
   "license": "Commercial",
   "dependencies": {
-    "@menome/botframework": "^1.0.6",
+    "@menome/botframework": "^1.1.6",
     "forever": "latest",
     "express": "latest",
     "jsonwebtoken": "^8.2.1",

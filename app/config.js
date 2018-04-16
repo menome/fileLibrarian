@@ -11,6 +11,7 @@ var bot = require('@menome/botframework')
 var config = convict({
   port: bot.configSchema.port,
   logging: bot.configSchema.logging,
+  ssl: bot.configSchema.ssl,
   librarian: {
     jwtSecret: {
       doc: "The secret we use to verify JSON Web Tokens",
