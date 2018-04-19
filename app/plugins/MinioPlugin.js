@@ -1,7 +1,6 @@
 /**
  * WebDAV Librarian.
  */
-var config = require('../config.js');
 var PluginCatalog = require('../PluginCatalog');
 var Minio = require('minio')
 

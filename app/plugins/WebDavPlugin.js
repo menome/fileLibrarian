@@ -2,7 +2,6 @@
  * WebDAV Librarian.
  */
 var createClient = require('webdav');
-var config = require('../config.js');
 var PluginCatalog = require('../PluginCatalog');
 
 function WebDavPlugin({host,username,password}) {

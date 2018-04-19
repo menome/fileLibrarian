@@ -1,4 +1,6 @@
 {
+  "name": "File Librarian",
+  "desc": "Backend-agnostic file fetcher.",
   "logging": true,
   "port": 3000,
   "librarian": {
@@ -14,7 +16,7 @@
     {
       "connection_type": "webdav",
       "connection_libraryname": "sambadav",
-      "host": "http://localhost:8080/webfolders",
+      "host": "http://10.2.200.156:8000/webfolders",
       "username": "kaust",
       "password": "n00dl3c0rn"
     },
