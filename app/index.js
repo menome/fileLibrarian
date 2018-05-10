@@ -11,13 +11,6 @@ const configSchema = require("./config-schema")
 const ConnectionRegistry = require('./ConnectionRegistry');
 const PluginCatalog = require('./PluginCatalog');
 
-// Loader for controllers
-var paths = { }
-var normalizedPath = path.join(__dirname, "controllers");
-fs.readdirSync(normalizedPath).forEach(function(file) {
-  paths = Object.assign(paths,require("./controllers/" + file).swaggerDef);
-});
-
 // Loader for Library plugins.
 var normalizedPath = path.join(__dirname, "plugins");
 fs.readdirSync(normalizedPath).forEach(function(file) {
@@ -41,8 +34,7 @@ bot.web.use((req,res,next) => {
 
 // Set up our security middleware.
 bot.web.use("/retrieve", Authenticate.bind(this,bot.config));
-
-bot.registerPaths(paths,__dirname+"/controllers");
+bot.registerControllers(path.join(__dirname+"/controllers"));
 
 bot.start();
 bot.changeState({state: "idle"});

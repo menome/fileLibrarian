@@ -5,7 +5,8 @@ module.exports.swaggerDef = {
       "tags": [
         "Librarian"
       ],
-      "parameters": [{
+      "parameters": [
+        {
           "name": "path",
           "in": "query",
           "required": true,
