@@ -24,6 +24,14 @@ function WebDavPlugin({host,username,password}) {
       res.status(500).send(err.toString());
     })
   }
+
+  this.delete = function(req,res) {
+    this.client.deleteFile(req.query.path).then(() => {
+      res.sendStatus(200);
+    }).catch((err) => {
+      res.status(500).send(err.toString());
+    })
+  }
 }
 
 PluginCatalog.register('webdav', WebDavPlugin);

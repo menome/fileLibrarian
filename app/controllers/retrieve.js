@@ -5,6 +5,7 @@ module.exports.swaggerDef = {
       "tags": [
         "Librarian"
       ],
+      "deprecated": true,
       "parameters": [
         {
           "name": "path",
