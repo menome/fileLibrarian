@@ -33,7 +33,7 @@ bot.web.use((req,res,next) => {
 });
 
 // Set up our security middleware.
-bot.web.use("/retrieve", Authenticate.bind(this,bot.config));
+Authenticate.setup(bot);
 bot.registerControllers(path.join(__dirname+"/controllers"));
 
 bot.start();

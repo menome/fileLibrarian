@@ -4,7 +4,9 @@
   "logging": true,
   "port": 3000,
   "librarian": {
-    "jwtSecret": "nice web mister crack spider"
+    "jwtSecret": "nice web mister crack spider",
+    "user": "botuser",
+    "password": "UzTSy9zp46kKhTT6"
   },
   "ssl": {
     "enable": false,
