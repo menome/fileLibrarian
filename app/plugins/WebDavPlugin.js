@@ -25,6 +25,14 @@ function WebDavPlugin({host,username,password}) {
     })
   }
 
+  this.head = function(req,res) {
+    return this.client.stat(req.query.path).then((statResult) => {
+      res.set("Content-Length", statResult.size).sendStatus(200);
+    }).catch((err) => {
+      res.sendStatus(err.status)
+    })
+  }
+
   this.delete = function(req,res) {
     this.client.deleteFile(req.query.path).then(() => {
       res.sendStatus(200);

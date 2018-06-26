@@ -17,6 +17,12 @@ function ConnectionRegistry() {
     return this.librarians[key].get(req,res)
   }
 
+  this.head = function(key, req, res) {
+    if(!this.librarians.hasOwnProperty(key)) throw new Error("No Librarian with key "+key);
+    if(typeof this.librarians[key].head !== 'function') throw new Error("Librarian has no defined 'head' function.");
+    return this.librarians[key].head(req,res)
+  }
+
   this.delete = function(key, req, res) {
     if(!this.librarians.hasOwnProperty(key)) throw new Error("No Librarian with key "+key);
     if(typeof this.librarians[key].delete !== 'function') throw new Error("Librarian has no defined 'delete' function.");

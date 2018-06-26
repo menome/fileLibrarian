@@ -38,6 +38,20 @@ function MinioPlugin({host,port,secure,accesskey,secretkey}) {
       return res.status(500).send(err.toString());
     })
   }
+
+  this.head = function(req,res) {
+    // Get bucket name out of path
+    var path = req.query.path;
+    var fileName = path.substring(path.indexOf('/'));
+    var bucket = path.substring(0,path.indexOf('/'));
+    
+    this.client.statObject(bucket, fileName).then((stat) => {
+      res.set("Content-Length", stat.size).sendStatus(200);
+    }).catch((err) => {
+      if(err.code === 'NotFound') return res.sendStatus(404);
+      return res.sendStatus(500);
+    })
+  }
 }
 
 PluginCatalog.register('minio', MinioPlugin);
