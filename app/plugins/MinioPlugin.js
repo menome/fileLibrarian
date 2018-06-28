@@ -46,7 +46,7 @@ function MinioPlugin({host,port,secure,accesskey,secretkey}) {
     var bucket = path.substring(0,path.indexOf('/'));
     
     this.client.statObject(bucket, fileName).then((stat) => {
-      res.set("Content-Length", stat.size).sendStatus(200);
+      res.set("Content-Length", stat.size).status(200).send();
     }).catch((err) => {
       if(err.code === 'NotFound') return res.sendStatus(404);
       return res.sendStatus(500);

@@ -10,24 +10,34 @@ function WebDavPlugin({host,username,password}) {
   
 
   this.get = function(req,res) {
-    var dataStream = this.client.createReadStream(req.query.path)
+    return this.client.stat(req.query.path).then(() => {
+      var dataStream = this.client.createReadStream(req.query.path)
     
-    dataStream.on('data', function(chunk) {
-      res.write(chunk);
-    })
-  
-    dataStream.on('end', function() {
-      res.send();
-    })
-  
-    dataStream.on('error', function(err) {
-      res.status(500).send(err.toString());
+      dataStream.on('data', function(chunk) {
+        res.write(chunk);
+      })
+    
+      dataStream.on('end', function() {
+        res.send();
+      })
+    
+      dataStream.on('error', function(err) {
+        res.status(500).send(err.toString());
+      })
+    }).catch((err) => {
+      res.status(err.status);
+
+      if(err.status === 404) {
+        return res.json({message: "File not found.", expected_path: req.query.path})
+      }
+      else
+        res.send();
     })
   }
 
   this.head = function(req,res) {
     return this.client.stat(req.query.path).then((statResult) => {
-      res.set("Content-Length", statResult.size).sendStatus(200);
+      res.set("Content-Length", statResult.size).status(200).send();
     }).catch((err) => {
       res.sendStatus(err.status)
     })
