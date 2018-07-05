@@ -92,21 +92,21 @@ module.exports.swaggerDef = {
 }
 
 module.exports.get = function(req,res) {
-  req.body.logger.info("Getting file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
+  req.bot.logger.info("Getting file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to retrieve from.");
   return req.registry.get(library, req, res);
 }
 
 module.exports.head = function(req,res) {
-  req.body.logger.info("Checking file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
+  req.bot.logger.info("Checking file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to check.");
   return req.registry.head(library, req, res);
 }
 
 module.exports.delete = function(req,res) {
-  req.body.logger.info("Deleting file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
+  req.bot.logger.info("Deleting file %s from store %s", req.swagger.params.library.value, req.swagger.params.path.value)
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to delete from.");
   return req.registry.delete(library, req, res);
