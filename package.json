@@ -19,7 +19,7 @@
     "passport-http": "^0.3.0",
     "webdav": "^1.5.2",
     "minio": "^5.0.0",
-    "onedrive-api":"latest"
+    "onedrive-api": "latest"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
