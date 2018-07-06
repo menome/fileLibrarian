@@ -14,12 +14,24 @@ function DropboxPlugin(accessToken) {
     //Get metadata function
     this.get = function(req,res) {
         dbx.fileRequestsGet({id:req.query.id})
-        .then(function(response) {
-          console.log(response);
+        .then(function(dataStream) {
+
+            dataStream.on('data', function(chunk) {
+                res.write(chunk);
+            })
+        
+            dataStream.on('end', function() {
+                res.send();
+            })
+        
+            dataStream.on('error', function(err) {
+                res.status(500).send(err.toString());
+            })
+
+        }).catch((err) => {
+            if(err.code === 'NotFound') return res.status(404).send(err.toString());
+            return res.status(500).send(err.toString());
         })
-        .catch(function(error) {
-          console.log(error);
-        });
     }
 }
 
