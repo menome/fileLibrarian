@@ -28,6 +28,11 @@
       "host": "10.2.200.156",
       "accesskey": "menomeuser",
       "secretkey": "hellaNiceLemons21"
+    },
+    {
+      "connection_type": "oneDrive",
+      "connection_libraryname": "MenomeOneDrive",
+      "clientId": "d2c00f38-8a18-4b34-88ed-9cdbe258a032"
     }
   ]
 }
