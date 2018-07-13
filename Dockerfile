@@ -7,7 +7,7 @@ EXPOSE 80
 ENV PORT 80
 
 # Commands will run in this directory
-RUN mkdir /srv/app
+#RUN mkdir /srv/app
 WORKDIR /srv/app
 
 # Add build file
