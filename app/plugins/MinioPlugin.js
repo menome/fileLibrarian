@@ -39,6 +39,21 @@ function MinioPlugin({host,port,secure,accesskey,secretkey}) {
     })
   }
 
+  this.post = function(req,res) {
+    var path = req.query.path;
+    var fileName = path.substring(path.indexOf('/')+1);
+    var bucket = path.substring(0,path.indexOf('/'));
+    
+    return this.client.putObject(bucket, fileName, req.swagger.params.upfile.value.buffer, req.swagger.params.upfile.value.size).then((etag) => {
+      return res.status(201).send(JSON.stringify({
+        message: "Uploaded",
+        etag
+      }))
+    }).catch((err) => {
+      return res.status(500).send(err.toString());
+    })
+  }
+
   this.head = function(req,res) {
     // Get bucket name out of path
     var path = req.query.path;

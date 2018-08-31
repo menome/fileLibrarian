@@ -34,6 +34,12 @@ function ConnectionRegistry() {
     if(typeof this.librarians[key].post !== 'function') throw new Error("Librarian has no defined 'post' function.");
     return this.librarians[key].post(req,res)
   }
+
+  this.put = function(key, req, res) {
+    if(!this.librarians.hasOwnProperty(key)) throw new Error("No Librarian with key "+key);
+    if(typeof this.librarians[key].put !== 'function') throw new Error("Librarian has no defined 'put' function.");
+    return this.librarians[key].put(req,res)
+  }
 }
 
 module.exports = ConnectionRegistry;
