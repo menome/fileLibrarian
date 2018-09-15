@@ -25,6 +25,7 @@
     {
       "connection_type": "minio",
       "connection_libraryname": "miniofiles",
+      "useSSL": false,
       "host": "localhost",
       "accesskey": "abcd123",
       "secretkey": "abcd12345"

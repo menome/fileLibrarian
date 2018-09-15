@@ -4,13 +4,13 @@
 var PluginCatalog = require('../PluginCatalog');
 var Minio = require('minio')
 
-function MinioPlugin({host,port,secure,accesskey,secretkey}) {
+function MinioPlugin({host,port,useSSL,accesskey,secretkey}) {
   if(!host || !accesskey || !secretkey) throw new Error("Invalid config for Minio.")
 
   this.client = new Minio.Client({
     endPoint: host,
     port: port || 9000,
-    secure: secure || false,
+    useSSL: useSSL || false,
     accessKey: accesskey,
     secretKey: secretkey
   });
