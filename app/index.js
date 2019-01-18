@@ -29,7 +29,19 @@ bot.config.get('connections').forEach((connection) => {
 // Let our middleware use these.
 bot.web.use((req,res,next) => {
   req.registry = thisRegistry;
-  next();
+
+  // Allow for CORS.
+  // NOTE: We allow from any origin. This is because we require a signed Auth token with a limited lifespan to do anything.
+  var thisOrigin = req.get("Origin");
+  res.setHeader('Access-Control-Allow-Origin', thisOrigin || '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin,X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  if(req.method === 'OPTIONS')
+    return res.sendStatus(200);
+  else
+    return next();
 });
 
 // Set up our security middleware.

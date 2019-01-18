@@ -180,14 +180,14 @@ module.exports.head = function(req,res) {
 module.exports.put = function(req,res) {
   req.bot.logger.info("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value)
   var library = req.swagger.params.library.value;
-  if(!library) return res.status(400).send("Specify a Library to check.");
+  if(!library) return res.status(400).send("Specify a Library to put.");
   return req.registry.put(library, req, res);
 }
 
 module.exports.post = function(req,res) {
   req.bot.logger.info("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value)
   var library = req.swagger.params.library.value;
-  if(!library) return res.status(400).send("Specify a Library to check.");
+  if(!library) return res.status(400).send("Specify a Library to post.");
   return req.registry.post(library, req, res);
 }
 

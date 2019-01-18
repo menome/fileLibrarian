@@ -38,7 +38,7 @@ function MinioPlugin({host,port,useSSL,accesskey,secretkey}) {
       return res.status(500).send(err.toString());
     })
   }
-
+  
   this.post = function(req,res) {
     var path = req.query.path;
     var fileName = path.substring(path.indexOf('/')+1);
@@ -53,6 +53,8 @@ function MinioPlugin({host,port,useSSL,accesskey,secretkey}) {
       return res.status(500).send(err.toString());
     })
   }
+
+  this.put = this.post;
 
   this.head = function(req,res) {
     // Get bucket name out of path
