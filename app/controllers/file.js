@@ -165,8 +165,8 @@ module.exports.swaggerDef = {
 
 module.exports.get = function(req,res) {
   req.bot.logger.info("Getting file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value)
-  // Set the filename for the attachment header.
-  res.attachment(req.swagger.params.path.value.substring(req.swagger.params.path.value.lastIndexOf('/')+1))
+  let fileName = req.swagger.params.path.value.substring(req.swagger.params.path.value.lastIndexOf('/')+1);
+  res.set("Content-Disposition", 'inline; filename="'+fileName+'"');
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to retrieve from.");
   return req.registry.get(library, req, res);
