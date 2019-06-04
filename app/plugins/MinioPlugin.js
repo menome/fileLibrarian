@@ -69,6 +69,22 @@ function MinioPlugin({host,port,useSSL,accesskey,secretkey}) {
       return res.sendStatus(500);
     })
   }
+
+  this.delete = function(req,res) {
+    // Get bucket name out of path
+    var path = req.query.path;
+    var fileName = path.substring(path.indexOf('/'));
+    var bucket = path.substring(0,path.indexOf('/'));
+
+    this.client.removeObject(bucket, fileName).then(() => {
+      return res.status(200).send(JSON.stringify({
+        message: "Deleted"
+      }))
+    }).catch((err) => {
+      if(err.code === 'NotFound') return res.sendStatus(404);
+      return res.sendStatus(500);
+    })
+  }
 }
 
 PluginCatalog.register('minio', MinioPlugin);
