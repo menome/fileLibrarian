@@ -8,7 +8,6 @@ function WebDavPlugin({host,username,password}) {
   if(!host || !username || !password) throw new Error("Invalid config for webdav.")
   this.client = createClient(host,username,password);
   
-
   this.get = function(req,res) {
     return this.client.stat(req.query.path).then(() => {
       var dataStream = this.client.createReadStream(req.query.path)
@@ -34,6 +33,21 @@ function WebDavPlugin({host,username,password}) {
         res.send();
     })
   }
+
+  this.post = function(req,res) {
+    var path = req.query.path;
+    
+    return this.client.putFileContents(path, req.swagger.params.upfile.value.buffer).then((upResult) => {
+      return res.status(201).send(JSON.stringify({
+        message: "Uploaded",
+        upResult
+      }))
+    }).catch((err) => {
+      return res.status(500).send(err.toString());
+    })
+  }
+
+  this.put = this.post;
 
   this.head = function(req,res) {
     return this.client.stat(req.query.path).then((statResult) => {
