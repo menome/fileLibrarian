@@ -1,7 +1,7 @@
 {
   "name": "file-librarian",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Webservice for serving Files for theLink over multiple backends.",
   "repository": "https://github.com/menome",
   "license": "Commercial",

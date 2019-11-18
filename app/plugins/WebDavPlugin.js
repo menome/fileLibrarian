@@ -34,14 +34,16 @@ function WebDavPlugin({host,username,password}) {
     })
   }
 
-  this.post = function(req,res) {
+  this.post = async function(req,res) {
     var path = req.query.path;
-    
-    return this.client.putFileContents(path, req.swagger.params.upfile.value.buffer).then((upResult) => {
+    let dirPath = req.query.path.substring(0,req.query.path.lastIndexOf('/'));
+    await this.client.createDirectory(dirPath).catch((err) => {
+    })
+    return  this.client.putFileContents(path, req.swagger.params.upfile.value.buffer).then((upResult) => {
       return res.status(201).send(JSON.stringify({
         message: "Uploaded",
         upResult
-      }))
+      }));
     }).catch((err) => {
       return res.status(500).send(err.toString());
     })
