@@ -163,8 +163,10 @@ module.exports.swaggerDef = {
   }
 }
 
+const util = require('util');
+
 module.exports.get = function(req,res) {
-  req.bot.logger.info("Getting file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value)
+  req.bot.logger.info(util.format("Getting file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value),{method: "get", library:req.swagger.params.library.value,file:req.swagger.params.path.value})
   let fileName = req.swagger.params.path.value.substring(req.swagger.params.path.value.lastIndexOf('/')+1);
   res.set("Content-Disposition", 'inline; filename="'+fileName+'"');
   var library = req.swagger.params.library.value;
@@ -173,28 +175,28 @@ module.exports.get = function(req,res) {
 }
 
 module.exports.head = function(req,res) {
-  req.bot.logger.info("Checking file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value)
+  req.bot.logger.info(util.format("Checking file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value),{method: "head", library:req.swagger.params.library.value,file:req.swagger.params.path.value})
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to check.");
   return req.registry.head(library, req, res);
 }
 
 module.exports.put = function(req,res) {
-  req.bot.logger.info("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value)
+  req.bot.logger.info(util.format("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value),{method: "put", library:req.swagger.params.library.value,file:req.swagger.params.path.value})
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to put.");
   return req.registry.put(library, req, res);
 }
 
 module.exports.post = function(req,res) {
-  req.bot.logger.info("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value)
+  req.bot.logger.info(util.format("Uploading file %s to store %s", req.swagger.params.path.value,req.swagger.params.library.value),{method: "post", library:req.swagger.params.library.value,file:req.swagger.params.path.value})
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to post.");
   return req.registry.post(library, req, res);
 }
 
 module.exports.delete = function(req,res) {
-  req.bot.logger.info("Deleting file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value)
+  req.bot.logger.info(util.format("Deleting file %s from store %s", req.swagger.params.path.value,req.swagger.params.library.value),{method: "delete", library:req.swagger.params.library.value,file:req.swagger.params.path.value})
   var library = req.swagger.params.library.value;
   if(!library) return res.status(400).send("Specify a Library to delete from.");
   return req.registry.delete(library, req, res);
