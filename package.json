@@ -1,12 +1,12 @@
 {
   "name": "file-librarian",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Webservice for serving Files for theLink over multiple backends.",
   "repository": "https://github.com/menome",
   "license": "Commercial",
   "dependencies": {
-    "@menome/botframework": "^2.1.4",
+    "@menome/botframework": "^3.1.0",
     "forever": "^0.15.3",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.1",
