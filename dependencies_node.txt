@@ -481,90 +481,7 @@ file-librarian@1.2.4 /mnt/e/Development/happy_meal/bots/fileLibrarian
 │ │ │ │ │     └── is-primitive@2.0.0
 │ │ │ │ └── normalize-path@2.1.1 deduped
 │ │ │ ├── async-each@1.0.1 deduped
-│ │ │ ├─┬ UNMET OPTIONAL DEPENDENCY fsevents@1.2.11
-│ │ │ │ ├── UNMET OPTIONAL DEPENDENCY bindings@1.5.0
-│ │ │ │ ├── UNMET OPTIONAL DEPENDENCY nan@2.14.0
-│ │ │ │ └─┬ UNMET OPTIONAL DEPENDENCY node-pre-gyp@0.14.0
-│ │ │ │   ├── UNMET OPTIONAL DEPENDENCY detect-libc@1.0.3
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY mkdirp@0.5.1
-│ │ │ │   │ └── UNMET OPTIONAL DEPENDENCY minimist@0.0.8
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY needle@2.4.0
-│ │ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY debug@3.2.6
-│ │ │ │   │ │ └── UNMET OPTIONAL DEPENDENCY ms@2.1.2
-│ │ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY iconv-lite@0.4.24
-│ │ │ │   │ │ └── UNMET OPTIONAL DEPENDENCY safer-buffer@2.1.2
-│ │ │ │   │ └── UNMET OPTIONAL DEPENDENCY sax@1.2.4
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY nopt@4.0.1
-│ │ │ │   │ ├── UNMET OPTIONAL DEPENDENCY abbrev@1.1.1
-│ │ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY osenv@0.1.5
-│ │ │ │   │   ├── UNMET OPTIONAL DEPENDENCY os-homedir@1.0.2
-│ │ │ │   │   └── UNMET OPTIONAL DEPENDENCY os-tmpdir@1.0.2
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY npm-packlist@1.4.7
-│ │ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY ignore-walk@3.0.3
-│ │ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY minimatch@3.0.4
-│ │ │ │   │ │   └─┬ UNMET OPTIONAL DEPENDENCY brace-expansion@1.1.11
-│ │ │ │   │ │     ├── UNMET OPTIONAL DEPENDENCY balanced-match@1.0.0
-│ │ │ │   │ │     └── UNMET OPTIONAL DEPENDENCY concat-map@0.0.1
-│ │ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY npm-bundled@1.1.1
-│ │ │ │   │   └── UNMET OPTIONAL DEPENDENCY npm-normalize-package-bin@1.0.1
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY npmlog@4.1.2
-│ │ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY are-we-there-yet@1.1.5
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY delegates@1.0.0
-│ │ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY readable-stream@2.3.6
-│ │ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY core-util-is@1.0.2
-│ │ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY inherits@2.0.4
-│ │ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY isarray@1.0.0
-│ │ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY process-nextick-args@2.0.1
-│ │ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │ │   │ │   ├─┬ UNMET OPTIONAL DEPENDENCY string_decoder@1.1.1
-│ │ │ │   │ │   │ └── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │ │   │ │   └── UNMET OPTIONAL DEPENDENCY util-deprecate@1.0.2
-│ │ │ │   │ ├── UNMET OPTIONAL DEPENDENCY console-control-strings@1.1.0
-│ │ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY gauge@2.7.4
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY aproba@1.2.0
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY console-control-strings@1.1.0
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY has-unicode@2.0.1
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY object-assign@4.1.1
-│ │ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY signal-exit@3.0.2
-│ │ │ │   │ │ ├─┬ UNMET OPTIONAL DEPENDENCY string-width@1.0.2
-│ │ │ │   │ │ │ ├── UNMET OPTIONAL DEPENDENCY code-point-at@1.1.0
-│ │ │ │   │ │ │ ├─┬ UNMET OPTIONAL DEPENDENCY is-fullwidth-code-point@1.0.0
-│ │ │ │   │ │ │ │ └── UNMET OPTIONAL DEPENDENCY number-is-nan@1.0.1
-│ │ │ │   │ │ │ └── UNMET OPTIONAL DEPENDENCY strip-ansi@3.0.1
-│ │ │ │   │ │ ├─┬ UNMET OPTIONAL DEPENDENCY strip-ansi@3.0.1
-│ │ │ │   │ │ │ └── UNMET OPTIONAL DEPENDENCY ansi-regex@2.1.1
-│ │ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY wide-align@1.1.3
-│ │ │ │   │ │   └── UNMET OPTIONAL DEPENDENCY string-width@1.0.2
-│ │ │ │   │ └── UNMET OPTIONAL DEPENDENCY set-blocking@2.0.0
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY rc@1.2.8
-│ │ │ │   │ ├── UNMET OPTIONAL DEPENDENCY deep-extend@0.6.0
-│ │ │ │   │ ├── UNMET OPTIONAL DEPENDENCY ini@1.3.5
-│ │ │ │   │ ├── UNMET OPTIONAL DEPENDENCY minimist@1.2.0
-│ │ │ │   │ └── UNMET OPTIONAL DEPENDENCY strip-json-comments@2.0.1
-│ │ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY rimraf@2.7.1
-│ │ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY glob@7.1.6
-│ │ │ │   │   ├── UNMET OPTIONAL DEPENDENCY fs.realpath@1.0.0
-│ │ │ │   │   ├─┬ UNMET OPTIONAL DEPENDENCY inflight@1.0.6
-│ │ │ │   │   │ ├── UNMET OPTIONAL DEPENDENCY once@1.4.0
-│ │ │ │   │   │ └── UNMET OPTIONAL DEPENDENCY wrappy@1.0.2
-│ │ │ │   │   ├── UNMET OPTIONAL DEPENDENCY inherits@2.0.4
-│ │ │ │   │   ├── UNMET OPTIONAL DEPENDENCY minimatch@3.0.4
-│ │ │ │   │   ├─┬ UNMET OPTIONAL DEPENDENCY once@1.4.0
-│ │ │ │   │   │ └── UNMET OPTIONAL DEPENDENCY wrappy@1.0.2
-│ │ │ │   │   └── UNMET OPTIONAL DEPENDENCY path-is-absolute@1.0.1
-│ │ │ │   ├── UNMET OPTIONAL DEPENDENCY semver@5.7.1
-│ │ │ │   └─┬ UNMET OPTIONAL DEPENDENCY tar@4.4.13
-│ │ │ │     ├── UNMET OPTIONAL DEPENDENCY chownr@1.1.3
-│ │ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY fs-minipass@1.2.7
-│ │ │ │     │ └── UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │ │     │ ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │ │     │ └── UNMET OPTIONAL DEPENDENCY yallist@3.1.1
-│ │ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY minizlib@1.3.3
-│ │ │ │     │ └── UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │ │     ├── UNMET OPTIONAL DEPENDENCY mkdirp@0.5.1
-│ │ │ │     ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │ │     └── UNMET OPTIONAL DEPENDENCY yallist@3.1.1
+│ │ │ ├── UNMET OPTIONAL DEPENDENCY fsevents@1.2.13
 │ │ │ ├─┬ glob-parent@2.0.0
 │ │ │ │ └── is-glob@2.0.1 deduped
 │ │ │ ├── inherits@2.0.3 deduped
@@ -1018,91 +935,10 @@ file-librarian@1.2.4 /mnt/e/Development/happy_meal/bots/fileLibrarian
 │ │ │   │ └── safe-regex@1.1.0 deduped
 │ │ │   └─┬ safe-regex@1.1.0
 │ │ │     └── ret@0.1.15
-│ │ ├─┬ UNMET OPTIONAL DEPENDENCY fsevents@1.2.11
-│ │ │ ├─┬ UNMET OPTIONAL DEPENDENCY bindings@1.5.0
-│ │ │ │ └── UNMET OPTIONAL DEPENDENCY file-uri-to-path@1.0.0
-│ │ │ ├── UNMET OPTIONAL DEPENDENCY nan@2.14.0
-│ │ │ └─┬ UNMET OPTIONAL DEPENDENCY node-pre-gyp@0.14.0
-│ │ │   ├── UNMET OPTIONAL DEPENDENCY detect-libc@1.0.3
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY mkdirp@0.5.1
-│ │ │   │ └── UNMET OPTIONAL DEPENDENCY minimist@0.0.8
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY needle@2.4.0
-│ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY debug@3.2.6
-│ │ │   │ │ └── UNMET OPTIONAL DEPENDENCY ms@2.1.2
-│ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY iconv-lite@0.4.24
-│ │ │   │ │ └── UNMET OPTIONAL DEPENDENCY safer-buffer@2.1.2
-│ │ │   │ └── UNMET OPTIONAL DEPENDENCY sax@1.2.4
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY nopt@4.0.1
-│ │ │   │ ├── UNMET OPTIONAL DEPENDENCY abbrev@1.1.1
-│ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY osenv@0.1.5
-│ │ │   │   ├── UNMET OPTIONAL DEPENDENCY os-homedir@1.0.2
-│ │ │   │   └── UNMET OPTIONAL DEPENDENCY os-tmpdir@1.0.2
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY npm-packlist@1.4.7
-│ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY ignore-walk@3.0.3
-│ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY minimatch@3.0.4
-│ │ │   │ │   └─┬ UNMET OPTIONAL DEPENDENCY brace-expansion@1.1.11
-│ │ │   │ │     ├── UNMET OPTIONAL DEPENDENCY balanced-match@1.0.0
-│ │ │   │ │     └── UNMET OPTIONAL DEPENDENCY concat-map@0.0.1
-│ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY npm-bundled@1.1.1
-│ │ │   │   └── UNMET OPTIONAL DEPENDENCY npm-normalize-package-bin@1.0.1
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY npmlog@4.1.2
-│ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY are-we-there-yet@1.1.5
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY delegates@1.0.0
-│ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY readable-stream@2.3.6
-│ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY core-util-is@1.0.2
-│ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY inherits@2.0.4
-│ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY isarray@1.0.0
-│ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY process-nextick-args@2.0.1
-│ │ │   │ │   ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │   │ │   ├─┬ UNMET OPTIONAL DEPENDENCY string_decoder@1.1.1
-│ │ │   │ │   │ └── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │   │ │   └── UNMET OPTIONAL DEPENDENCY util-deprecate@1.0.2
-│ │ │   │ ├── UNMET OPTIONAL DEPENDENCY console-control-strings@1.1.0
-│ │ │   │ ├─┬ UNMET OPTIONAL DEPENDENCY gauge@2.7.4
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY aproba@1.2.0
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY console-control-strings@1.1.0
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY has-unicode@2.0.1
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY object-assign@4.1.1
-│ │ │   │ │ ├── UNMET OPTIONAL DEPENDENCY signal-exit@3.0.2
-│ │ │   │ │ ├─┬ UNMET OPTIONAL DEPENDENCY string-width@1.0.2
-│ │ │   │ │ │ ├── UNMET OPTIONAL DEPENDENCY code-point-at@1.1.0
-│ │ │   │ │ │ ├─┬ UNMET OPTIONAL DEPENDENCY is-fullwidth-code-point@1.0.0
-│ │ │   │ │ │ │ └── UNMET OPTIONAL DEPENDENCY number-is-nan@1.0.1
-│ │ │   │ │ │ └── UNMET OPTIONAL DEPENDENCY strip-ansi@3.0.1
-│ │ │   │ │ ├─┬ UNMET OPTIONAL DEPENDENCY strip-ansi@3.0.1
-│ │ │   │ │ │ └── UNMET OPTIONAL DEPENDENCY ansi-regex@2.1.1
-│ │ │   │ │ └─┬ UNMET OPTIONAL DEPENDENCY wide-align@1.1.3
-│ │ │   │ │   └── UNMET OPTIONAL DEPENDENCY string-width@1.0.2
-│ │ │   │ └── UNMET OPTIONAL DEPENDENCY set-blocking@2.0.0
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY rc@1.2.8
-│ │ │   │ ├── UNMET OPTIONAL DEPENDENCY deep-extend@0.6.0
-│ │ │   │ ├── UNMET OPTIONAL DEPENDENCY ini@1.3.5
-│ │ │   │ ├── UNMET OPTIONAL DEPENDENCY minimist@1.2.0
-│ │ │   │ └── UNMET OPTIONAL DEPENDENCY strip-json-comments@2.0.1
-│ │ │   ├─┬ UNMET OPTIONAL DEPENDENCY rimraf@2.7.1
-│ │ │   │ └─┬ UNMET OPTIONAL DEPENDENCY glob@7.1.6
-│ │ │   │   ├── UNMET OPTIONAL DEPENDENCY fs.realpath@1.0.0
-│ │ │   │   ├─┬ UNMET OPTIONAL DEPENDENCY inflight@1.0.6
-│ │ │   │   │ ├── UNMET OPTIONAL DEPENDENCY once@1.4.0
-│ │ │   │   │ └── UNMET OPTIONAL DEPENDENCY wrappy@1.0.2
-│ │ │   │   ├── UNMET OPTIONAL DEPENDENCY inherits@2.0.4
-│ │ │   │   ├── UNMET OPTIONAL DEPENDENCY minimatch@3.0.4
-│ │ │   │   ├─┬ UNMET OPTIONAL DEPENDENCY once@1.4.0
-│ │ │   │   │ └── UNMET OPTIONAL DEPENDENCY wrappy@1.0.2
-│ │ │   │   └── UNMET OPTIONAL DEPENDENCY path-is-absolute@1.0.1
-│ │ │   ├── UNMET OPTIONAL DEPENDENCY semver@5.7.1
-│ │ │   └─┬ UNMET OPTIONAL DEPENDENCY tar@4.4.13
-│ │ │     ├── UNMET OPTIONAL DEPENDENCY chownr@1.1.3
-│ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY fs-minipass@1.2.7
-│ │ │     │ └── UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │     │ ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │     │ └── UNMET OPTIONAL DEPENDENCY yallist@3.1.1
-│ │ │     ├─┬ UNMET OPTIONAL DEPENDENCY minizlib@1.3.3
-│ │ │     │ └── UNMET OPTIONAL DEPENDENCY minipass@2.9.0
-│ │ │     ├── UNMET OPTIONAL DEPENDENCY mkdirp@0.5.1
-│ │ │     ├── UNMET OPTIONAL DEPENDENCY safe-buffer@5.1.2
-│ │ │     └── UNMET OPTIONAL DEPENDENCY yallist@3.1.1
+│ │ ├─┬ UNMET OPTIONAL DEPENDENCY fsevents@1.2.13
+│ │ │ ├─┬ bindings@1.5.0
+│ │ │ │ └── file-uri-to-path@1.0.0
+│ │ │ └── nan@2.14.2
 │ │ ├─┬ glob-parent@3.1.0
 │ │ │ ├─┬ is-glob@3.1.0
 │ │ │ │ └── is-extglob@2.1.1 deduped
