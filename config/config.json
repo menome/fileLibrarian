@@ -4,9 +4,9 @@
   "logging": true,
   "port": 3000,
   "librarian": {
-    "jwtSecret": "nice web mister crack spider",
+    "jwtSecret": "boser boser boser",
     "user": "botuser",
-    "password": "UzTSy9zp46kKhTT6"
+    "password": "boser"
   },
   "ssl": {
     "enable": false,
@@ -20,7 +20,7 @@
       "connection_libraryname": "sambadav",
       "host": "http://10.2.200.156:8000/webfolders",
       "username": "kaust",
-      "password": "n00dl3c0rn"
+      "password": "boser"
     },
     {
       "connection_type": "minio",
